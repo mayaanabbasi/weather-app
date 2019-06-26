@@ -10,7 +10,7 @@ const Display = (props) => {
             }
             { 
                 props.Temperature && <p className="weather__key">Temprature: 
-                <span className="weather__value"> {props.Temperature}</span>
+                <span className="weather__value"> {props.Temperature} °C</span>
                 </p>
             }
             { 

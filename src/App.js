@@ -19,8 +19,9 @@ class App extends React.Component {
     const api_call = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
     const data = await api_call.json();
     console.log(data);
+    const tempcelsius = (data.main.temp - 273.15).toFixed();
     this.setState({
-      Temperature: data.main.temp,
+      Temperature: tempcelsius,
       City: data.name,
       Country: data.sys.country,
       Humidity: data.main.humidity,
